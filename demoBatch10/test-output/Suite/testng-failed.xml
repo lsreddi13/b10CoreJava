@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite parallel="none" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="name" value="Selenium TestNG"/>
   <test thread-count="5" name="Test">
+    <parameter name="name" value="Selenium TestNG"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.selenium.day2.TestBrowsers"/>
-      <class name="com.selenium.day2.TestBrowsers4"/>
-      <class name="com.selenium.day2.TestBrowsers2"/>
-      <class name="com.selenium.day2.TestBrowsers3"/>
+      <class name="com.seleniumt.testng.Demogroups"/>
+      <class name="com.seleniumt.testng.Test1"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Failed suite [Suite] -->

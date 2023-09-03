@@ -23,6 +23,8 @@ public class DemoAmazon {
 		System.out.println("current page url : "+ driver.getCurrentUrl());
 		
 		
+		
+		
 	
 //		
 	}

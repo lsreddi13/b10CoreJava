@@ -13,6 +13,7 @@ public class DemoTagName {
 	String url = "https://www.amazon.in/";
 	@Test
 	public void testLinkText() {
+		String url = "https://www.amazon.in/";
 		WebDriver driver = new ChromeDriver();
 		driver.get(url);
 		List<WebElement> li = driver.findElements(By.tagName("a"));
