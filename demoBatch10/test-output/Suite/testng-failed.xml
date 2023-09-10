@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite parallel="none" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <parameter name="name" value="Selenium TestNG"/>
-  <test thread-count="5" name="Test">
-    <parameter name="name" value="Selenium TestNG"/>
-    <groups>
-      <run>
-        <include name="smoke"/>
-      </run>
-    </groups>
+  <test thread-count="4" parallel="methods" name="Test">
     <classes>
-      <class name="com.seleniumt.testng.Demogroups"/>
-      <class name="com.seleniumt.testng.Test1"/>
+      <class name="com.ohrm.parallel.DemoParallel"/>
+      <class name="com.ohrm.parallel.DemoParallel2"/>
     </classes>
   </test> <!-- Test -->
+  <test parallel="methods" name="Test(failed)">
+    <classes>
+      <class name="com.ohrm.parallel.DemoParallel2">
+        <methods>
+          <include name="testSakshi"/>
+        </methods>
+      </class> <!-- com.ohrm.parallel.DemoParallel2 -->
+    </classes>
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

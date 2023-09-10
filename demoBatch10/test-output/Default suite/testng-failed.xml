@@ -3,20 +3,7 @@
 <suite parallel="none" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test" verbose="2">
     <classes>
-      <class name="com.seleniumt.testng.Test1">
-        <methods>
-          <include name="testMethod1"/>
-        </methods>
-      </class> <!-- com.seleniumt.testng.Test1 -->
+      <class name="com.ohrm.actions.DemoDouble"/>
     </classes>
   </test> <!-- Default test -->
-  <test parallel="none" name="Default test(failed)">
-    <classes>
-      <class name="com.seleniumt.testng.Test1">
-        <methods>
-          <include name="testMethod1"/>
-        </methods>
-      </class> <!-- com.seleniumt.testng.Test1 -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
