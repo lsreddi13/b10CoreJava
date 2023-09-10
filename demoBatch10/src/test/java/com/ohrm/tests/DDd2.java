@@ -1,6 +1,8 @@
 package com.ohrm.tests;
 
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -17,9 +19,14 @@ public class DDd2 extends Base {
 	public void testBrowser() throws InterruptedException {
 		selectBrowser("chrome");
 		driver.get(url);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		driver.manage().window().maximize();
 		String pageTitle = driver.getTitle();
-		Thread.sleep(3000);
+
+		
+		
+		
+		
 		LoginPage lp = new LoginPage();
 		lp.login("Admin", "admin123");
 
